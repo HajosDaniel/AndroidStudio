@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageProfile"
+        android:src="@mipmap/profile2"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/layoutHeader"
+        android:layout_margin="20px" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jakob Busch"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textTitle"
+        android:layout_below="@+id/imageProfile" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/textTitle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="ist ein vielseitiger Musiker aus Haslach an der Mühl, der als JackTheBusch mit zahlreichen Songs auf Youtube vertreten ist und bereits eine CD mit Eigenkompositionen herausgebracht hat.
+            \n
+            \nSeine musikalische Laufbahn begann bereits im Kindesalter. Er sang in einem Jugendchor, spielte Schlagzeug, probierte sich als Autodidakt am Keyboard und begann schließlich im Alter von 14 Jahren Gitarre zu spielen. Seine musikalische Ausbildung intensivierte er, indem er den Musikzweig des BORG Bad Leonfelden besuchte, wo er 2012 maturierte. 2011 begann JackTheBusch seine Karriere als Straßenmusiker, worauf rasch zahlreiche Auftritte bei unterschiedlichsten Anlässen folgten.
+            \n
+            \nNeben seiner regen musikalischen Tätigkeit absolvierte Jakob Busch 2015 die Ausbildung zum Fach-Sozialbetreuer Behindertenarbeit in Gallneukirchen."
+            android:id="@+id/textView"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:isScrollContainer="true"
+            android:padding="30px"
+            android:layout_marginTop="50px"
+            android:verticalScrollbarPosition="right"
+            android:layout_marginBottom="20px"/>
+    </ScrollView>
+
+</RelativeLayout>

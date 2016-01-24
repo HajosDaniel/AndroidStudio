@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="PrimaryColor">#efeff4</color>
+    <color name="PrimaryDarkColor">#142131</color>
+    <color name="indicator">#FFFFFF</color>
+</resources>
