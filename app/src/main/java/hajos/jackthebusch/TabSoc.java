@@ -1,13 +1,18 @@
 package hajos.jackthebusch;
 
+import android.content.Context;
 import android.content.Intent;
+import android.hardware.display.DisplayManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 
 /**
  * Created by Daniel Hajos on 29.12.2015.
@@ -32,6 +37,37 @@ public class TabSoc extends Fragment {
         btt_Home = (Button) view.findViewById(R.id.bttHome);
         btt_Mail = (Button) view.findViewById(R.id.bttMail);
         btt_Post = (Button) getActivity().findViewById(R.id.bttPost);
+
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        WindowManager wm = (WindowManager) getActivity().getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
+        wm.getDefaultDisplay().getMetrics(displayMetrics);
+        int screenHeight = displayMetrics.heightPixels;
+        int screenWidth  = displayMetrics.widthPixels;
+
+        RelativeLayout.LayoutParams paramsBttF = (RelativeLayout.LayoutParams) btt_Facebook.getLayoutParams();
+        paramsBttF.height = (int) (screenHeight * 0.05);
+        paramsBttF.width  = (int) (screenWidth  * 0.05);
+        btt_Facebook.requestLayout();
+
+        RelativeLayout.LayoutParams paramsBttI = (RelativeLayout.LayoutParams) btt_Instagram.getLayoutParams();
+        paramsBttI.height = (int) (screenHeight * 0.1);
+        paramsBttI.width  = (int) (screenWidth  * 0.1);
+        btt_Instagram.requestLayout();
+
+        RelativeLayout.LayoutParams paramsBttY = (RelativeLayout.LayoutParams) btt_Youtube.getLayoutParams();
+        paramsBttY.height = (int) (screenHeight * 0.1);
+        paramsBttY.width  = (int) (screenWidth  * 0.3);
+        btt_Youtube.requestLayout();
+
+        RelativeLayout.LayoutParams paramsBttT = (RelativeLayout.LayoutParams) btt_Tunes.getLayoutParams();
+        paramsBttT.height = (int) (screenHeight * 0.1);
+        paramsBttT.width  = (int) (screenWidth  * 0.3);
+        btt_Tunes.requestLayout();
+
+        RelativeLayout.LayoutParams paramsBttH = (RelativeLayout.LayoutParams) btt_Home.getLayoutParams();
+        paramsBttH.height = (int) (screenHeight * 0.15);
+        paramsBttH.width  = (int) (screenWidth  * 0.15);
+        btt_Home.requestLayout();
 
         btt_Post.setOnClickListener(new View.OnClickListener() {
             @Override
