@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         bio.setText("Bio");
         wall.setText("Fan Wall");
-        auf.setText("Termine");
+        auf.setText("Auftritte");
         soc.setText("Social Media");
 
 

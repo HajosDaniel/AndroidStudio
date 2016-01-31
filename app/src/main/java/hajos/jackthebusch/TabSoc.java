@@ -2,9 +2,9 @@ package hajos.jackthebusch;
 
 import android.content.Context;
 import android.content.Intent;
-import android.hardware.display.DisplayManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
@@ -12,7 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.RelativeLayout;
+import android.widget.TableLayout;
+import android.widget.TableRow;
 
 /**
  * Created by Daniel Hajos on 29.12.2015.
@@ -44,29 +45,30 @@ public class TabSoc extends Fragment {
         int screenHeight = displayMetrics.heightPixels;
         int screenWidth  = displayMetrics.widthPixels;
 
-        RelativeLayout.LayoutParams paramsBttF = (RelativeLayout.LayoutParams) btt_Facebook.getLayoutParams();
-        paramsBttF.height = (int) (screenHeight * 0.05);
-        paramsBttF.width  = (int) (screenWidth  * 0.05);
+
+        TableRow.LayoutParams paramsBttF = (TableRow.LayoutParams) btt_Facebook.getLayoutParams();
+        paramsBttF.height = (int) (screenHeight * 0.09);
+        paramsBttF.width  = (int) (screenWidth  * 0.09);
         btt_Facebook.requestLayout();
 
-        RelativeLayout.LayoutParams paramsBttI = (RelativeLayout.LayoutParams) btt_Instagram.getLayoutParams();
+        TableRow.LayoutParams paramsBttI = (TableRow.LayoutParams) btt_Instagram.getLayoutParams();
         paramsBttI.height = (int) (screenHeight * 0.1);
         paramsBttI.width  = (int) (screenWidth  * 0.1);
         btt_Instagram.requestLayout();
 
-        RelativeLayout.LayoutParams paramsBttY = (RelativeLayout.LayoutParams) btt_Youtube.getLayoutParams();
-        paramsBttY.height = (int) (screenHeight * 0.1);
+        TableRow.LayoutParams paramsBttY = (TableRow.LayoutParams) btt_Youtube.getLayoutParams();
+        paramsBttY.height = (int) (screenHeight * 0.07);
         paramsBttY.width  = (int) (screenWidth  * 0.3);
         btt_Youtube.requestLayout();
 
-        RelativeLayout.LayoutParams paramsBttT = (RelativeLayout.LayoutParams) btt_Tunes.getLayoutParams();
+        TableRow.LayoutParams paramsBttT = (TableRow.LayoutParams) btt_Tunes.getLayoutParams();
         paramsBttT.height = (int) (screenHeight * 0.1);
         paramsBttT.width  = (int) (screenWidth  * 0.3);
         btt_Tunes.requestLayout();
 
-        RelativeLayout.LayoutParams paramsBttH = (RelativeLayout.LayoutParams) btt_Home.getLayoutParams();
+        TableRow.LayoutParams paramsBttH = (TableRow.LayoutParams) btt_Home.getLayoutParams();
         paramsBttH.height = (int) (screenHeight * 0.15);
-        paramsBttH.width  = (int) (screenWidth  * 0.15);
+        paramsBttH.width  = (int) (screenWidth  * 0.05);
         btt_Home.requestLayout();
 
         btt_Post.setOnClickListener(new View.OnClickListener() {
