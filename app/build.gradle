@@ -17,6 +17,31 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    signingConfigs {
+        vanilla {
+            storeFile file("../../app.keystore") //Path to the keystore file
+            keyAlias "vanilla"
+            storePassword "12345678"
+            keyPassword "12345678"
+        }
+
+        strawberry {
+            storeFile file("../../app.keystore") //Path to the keystore file
+            keyAlias "strawberry"
+            storePassword "12345678"
+            keyPassword "12345678"
+        }
+    }
+
+    productFlavors {
+        vanilla{
+            applicationId "hajos.jackthebusch"
+        }
+        strawberry{
+            applicationId "hajos.jackthebusch.oldtroubles"
+        }
+    }
 }
 
 dependencies {

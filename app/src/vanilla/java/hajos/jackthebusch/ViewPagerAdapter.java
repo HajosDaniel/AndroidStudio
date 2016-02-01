@@ -20,7 +20,6 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if(position == 0) {
-
             return new TabBio();
         }
         else if(position == 1)
